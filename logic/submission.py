@@ -246,9 +246,13 @@ def ints():
         q = Even('$y')
         return Forall('$x',Forall('$y',Implies(p,q)))
     def five():
-        return
+        p = Successor('$x','$y')
+        q = Larger('$y','$x')
+        return Forall('$x',Forall('$y',Implies(p,q)))
     def six():
-        return
+        p = And(Larger('$y','$x'),Larger('$z','$y'))
+        q = Larger('$z','$x')
+        return Forall('$x',Forall('$y',Forall('$z',Implies(p,q))))
     formulas.append(one()) 
     formulas.append(two())
     formulas.append(three())
