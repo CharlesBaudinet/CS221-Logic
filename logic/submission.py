@@ -13,7 +13,14 @@ def formula1a():
     California = Atom('California')       # whether we're in California
     Rain = Atom('Rain')                   # whether it's raining
     # BEGIN_YOUR_CODE (around 1 line of code expected)
-    raise Exception("Not implemented yet")
+    # raise Exception("Not implemented yet")
+    def p():
+        return And(Summer,California)
+    def q():
+        return Not(Rain)
+    def conditional():
+        return Implies(p(),q())
+    return conditional()
     # END_YOUR_CODE
 
 # Sentence: "It's wet if and only if it is raining or the sprinklers are on."
