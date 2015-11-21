@@ -81,7 +81,14 @@ def formula2b():
     def Person(x): return Atom('Person', x)        # whether x is a person
     def Child(x, y): return Atom('Child', x, y)    # whether x has a child y
     # BEGIN_YOUR_CODE (around 1 line of code expected)
-    raise Exception("Not implemented yet")
+    # raise Exception("Not implemented yet")
+    def p():
+        return Person('$x')
+    def q():
+        return Forall('$y',Not(Child('$x','$y')))
+    def conditional():
+        return Exists('$x',And(p(),q()))
+    return conditional()
     # END_YOUR_CODE
 
 # Return a formula which defines Daughter in terms of Female and Child.
