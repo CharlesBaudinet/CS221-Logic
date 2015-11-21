@@ -65,7 +65,14 @@ def formula2a():
     def Person(x): return Atom('Person', x)        # whether x is a person
     def Mother(x, y): return Atom('Mother', x, y)  # whether x's mother is y
     # BEGIN_YOUR_CODE (around 1 line of code expected)
-    raise Exception("Not implemented yet")
+    # raise Exception("Not implemented yet")
+    def p():
+        return Person('$x')
+    def q():
+        return Exists('$y',Mother('$x','$y'))
+    def conditional():
+        return Implies(p(),q())
+    return Forall('$x', conditional())
     # END_YOUR_CODE
 
 # Sentence: "At least one person has no children."
