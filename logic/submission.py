@@ -162,8 +162,20 @@ def liar():
         p = TellTruth(nicole)
         q = Not(TellTruth(susan))
         return Equiv(p,q)
+    def oneTruth(arg):
+        truthList = [TellTruth(john),TellTruth(susan),TellTruth(nicole),TellTruth(mark)]
+        ret = []
+        for i in range(4):
+            if i == arg:
+                ret.append(truthList[i])
+            else:
+                ret.append(Not(truthList[i]))
+        return AndList(ret)
     def fourFn():
-        return 
+        orTruth = []
+        for i in range(4):
+            orTruth.append(oneTruth(i))
+        return OrList(orTruth)
     def fiveFn():
         return
     formulas.append(susanFn()) 
