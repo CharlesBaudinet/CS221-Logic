@@ -6,8 +6,9 @@
             'extraCredit': False,
             'maxPoints': 1,
             'maxSeconds': 5,
-            'messages': ['Time limit (5 seconds) exceeded.'],
+            'messages': ['You matched the 512 models',
+                         "Example model: set(['Parent(o2,o3)', 'Female(o3)', 'Female(o2)', 'Female(o1)'])"],
             'name': 'formula2d',
-            'points': 0,
-            'seconds': 6}],
- 'totalPoints': 0}
+            'points': 1,
+            'seconds': 0}],
+ 'totalPoints': 1}

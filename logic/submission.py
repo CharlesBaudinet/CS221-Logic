@@ -117,11 +117,11 @@ def formula2d():
     # BEGIN_YOUR_CODE (around 5 lines of code expected)
     # raise Exception("Not implemented yet")
     def p():
-        return AndList([Parent('$x','$y'),Parent('$y','$z'),Female('$z')])
+        return Exists('$y',AndList([Parent('$x','$y'),Parent('$y','$z'),Female('$z')]))
     def q():
         return Grandmother('$x','$z')
     def conditional():
-        return Forall('$x',Forall('$y',Forall('$z',Equiv(p(),q()))))
+        return Forall('$x',Forall('$z',Equiv(p(),q())))
     return conditional()
     # END_YOUR_CODE
 
