@@ -99,7 +99,12 @@ def formula2c():
     def Child(x, y): return Atom('Child', x, y)        # whether x has a child y
     def Daughter(x, y): return Atom('Daughter', x, y)  # whether x has a daughter y
     # BEGIN_YOUR_CODE (around 5 lines of code expected)
-    raise Exception("Not implemented yet")
+    # raise Exception("Not implemented yet")
+    def p():
+        return And(Child('$x','$y'),Female('$y'))
+    def q():
+        return Daughter('$x','$y')
+    return Forall('$x',Forall('$y',Equiv(p(),q()))) 
     # END_YOUR_CODE
 
 # Return a formula which defines Grandmother in terms of Female and Parent.
