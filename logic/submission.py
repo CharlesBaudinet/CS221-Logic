@@ -46,7 +46,14 @@ def formula1c():
     Day = Atom('Day')     # whether it's day
     Night = Atom('Night') # whether it's night
     # BEGIN_YOUR_CODE (around 1 line of code expected)
-    raise Exception("Not implemented yet")
+    # raise Exception("Not implemented yet")
+    def left():
+        return And(Not(Day),Night)
+    def right():
+        return And(Day,Not(Night))
+    def both():
+        return Or(left(),right())
+    return both()
     # END_YOUR_CODE
 
 ############################################################
