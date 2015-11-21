@@ -176,8 +176,20 @@ def liar():
         for i in range(4):
             orTruth.append(oneTruth(i))
         return OrList(orTruth)
+    def oneServer(arg):
+        serverList = [CrashedServer(john),CrashedServer(susan),CrashedServer(nicole),CrashedServer(mark)]
+        ret = []
+        for i in range(4):
+            if i == arg:
+                ret.append(serverList[i])
+            else:
+                ret.append(Not(serverList[i]))
+        return AndList(ret)
     def fiveFn():
-        return
+        orServer = []
+        for i in range(4):
+            orServer.append(oneServer(i))
+        return OrList(orServer)
     formulas.append(susanFn()) 
     formulas.append(markFn())
     formulas.append(nicoleFn())
