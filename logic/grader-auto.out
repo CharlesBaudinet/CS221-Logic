@@ -6,8 +6,8 @@
             'extraCredit': False,
             'maxPoints': 1,
             'maxSeconds': 5,
-            'messages': ['Your formula (Forall($x,Forall($y,Forall($z,Implies(Grandmother($x,$z),And(And(Parent($x,$y),Parent($y,$z)),Female($z))))))) says the following model is FALSE, but it should be TRUE:'],
+            'messages': ['Time limit (5 seconds) exceeded.'],
             'name': 'formula2d',
             'points': 0,
-            'seconds': 0}],
+            'seconds': 6}],
  'totalPoints': 0}
