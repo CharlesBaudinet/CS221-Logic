@@ -153,7 +153,22 @@ def liar():
     formulas.append(Equiv(TellTruth(john), Not(CrashedServer(john))))
     # You should add 5 formulas, one for each of facts 1-5.
     # BEGIN_YOUR_CODE (around 15 lines of code expected)
-    raise Exception("Not implemented yet")
+    # raise Exception("Not implemented yet")
+    def susanFn():
+        return Equiv(TellTruth(susan), CrashedServer(nicole))
+    def markFn():
+        return Equiv(TellTruth(mark), CrashedServer(susan))
+    def nicoleFn():
+        return Equiv(TellTruth(nicole),Not(susanFn()))
+    def fourFn():
+        return 
+    def fiveFn():
+        return ""
+    formulas.append(susanFn()) 
+    formulas.append(markFn())
+    formulas.append(nicoleFn())
+    formulas.append(fourFn())
+    formulas.append(fiveFn())
     # END_YOUR_CODE
     query = CrashedServer('$x')
     return (formulas, query)
