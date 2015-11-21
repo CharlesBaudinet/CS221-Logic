@@ -226,7 +226,35 @@ def ints():
     formulas = []
     query = None
     # BEGIN_YOUR_CODE (around 25 lines of code expected)
-    raise Exception("Not implemented yet")
+    # raise Exception("Not implemented yet")
+    def one():
+        p = Successor('$x','$y')
+        q = Not(Equals('$x','$y'))
+        conditional = Forall('$x',Exists('$y',Implies(p,q)))
+        return conditional
+    def two():
+        oneOther = Or(Even('$x'),Odd('$x'))
+        notBoth = Not(And(Even('$x'),Odd('$x')))
+        conditional = Forall('$x',And(oneOther,notBoth))
+        return conditional
+    def three():
+        p = And(Even('$x'),Successor('$x','$y'))
+        q = Odd('$y')
+        return Forall('$x',Forall('$y',Implies(p,q)))
+    def four():
+        p = And(Odd('$x'),Successor('$x','$y'))
+        q = Even('$y')
+        return Forall('$x',Forall('$y',Implies(p,q)))
+    def five():
+        return
+    def six():
+        return
+    formulas.append(one()) 
+    formulas.append(two())
+    formulas.append(three())
+    formulas.append(four())
+    formulas.append(five())
+    formulas.append(six())
     # END_YOUR_CODE
     # For part (b), your job is to show that adding the following formula
     # would result in a contradiction for finite domains.
