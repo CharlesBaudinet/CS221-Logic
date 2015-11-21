@@ -2,13 +2,12 @@
  'maxTotalPoints': 1,
  'messages': [],
  'mode': 'auto',
- 'parts': [{'description': 'test implementation of statement 5 for ints',
+ 'parts': [{'description': 'test implementation of statement 0 for ints',
             'extraCredit': False,
             'maxPoints': 1,
             'maxSeconds': 10000,
-            'messages': ['You matched the 171 models',
-                         "Example model: set(['Larger(o2,o1)', 'Larger(o2,o2)', 'Larger(o2,o3)', 'Larger(o3,o3)'])"],
-            'name': 'ints-5',
-            'points': 1,
+            'messages': ['Your formula (Forall($x,Forall($y,Forall($z,Implies(And(Successor($x,$y),Equals($x,$y)),And(And(Successor($x,$y),Successor($x,$z)),Not(Equals($y,$z)))))))) says the following model is TRUE, but it should be FALSE:'],
+            'name': 'ints-0',
+            'points': 0,
             'seconds': 0}],
- 'totalPoints': 1}
+ 'totalPoints': 0}

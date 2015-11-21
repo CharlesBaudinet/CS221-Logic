@@ -228,9 +228,9 @@ def ints():
     # BEGIN_YOUR_CODE (around 25 lines of code expected)
     # raise Exception("Not implemented yet")
     def one():
-        p = Successor('$x','$y')
-        q = Not(Equals('$x','$y'))
-        conditional = Forall('$x',Exists('$y',Implies(p,q)))
+        p = And(Successor('$x','$y'),Equals('$x','$y'))
+        q = AndList([Successor('$x','$y'),Successor('$x','$z'),Not(Equals('$y','$z'))])
+        conditional = Forall('$x',Forall('$y',Forall('$z',Implies(p,q))))
         return conditional
     def two():
         oneOther = Or(Even('$x'),Odd('$x'))
