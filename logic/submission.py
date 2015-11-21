@@ -159,7 +159,9 @@ def liar():
     def markFn():
         return Equiv(TellTruth(mark), CrashedServer(susan))
     def nicoleFn():
-        return Equiv(TellTruth(nicole),Not(susanFn()))
+        p = TellTruth(nicole)
+        q = Not(TellTruth(susan))
+        return Equiv(p,q)
     def fourFn():
         return 
     def fiveFn():
