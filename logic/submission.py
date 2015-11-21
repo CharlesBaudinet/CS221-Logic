@@ -30,7 +30,14 @@ def formula1b():
     Wet = Atom('Wet')                # whether it it wet
     Sprinklers = Atom('Sprinklers')  # whether the sprinklers are on
     # BEGIN_YOUR_CODE (around 1 line of code expected)
-    raise Exception("Not implemented yet")
+    # raise Exception("Not implemented yet")
+    def p():
+        return Wet
+    def q():
+        return Or(Rain,Sprinklers)
+    def conditional():
+        return Equiv(p(),q())
+    return conditional()
     # END_YOUR_CODE
 
 # Sentence: "Either it's day or night (but not both)."
