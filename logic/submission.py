@@ -163,7 +163,7 @@ def liar():
     def fourFn():
         return 
     def fiveFn():
-        return ""
+        return
     formulas.append(susanFn()) 
     formulas.append(markFn())
     formulas.append(nicoleFn())
