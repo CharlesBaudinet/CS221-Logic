@@ -2,13 +2,12 @@
  'maxTotalPoints': 1,
  'messages': [],
  'mode': 'auto',
- 'parts': [{'description': 'Test formula 2c implementation',
+ 'parts': [{'description': 'Test formula 2d implementation',
             'extraCredit': False,
             'maxPoints': 1,
             'maxSeconds': 5,
-            'messages': ['You matched the 512 models',
-                         "Example model: set(['Child(o3,o2)', 'Child(o1,o3)', 'Child(o1,o2)', 'Child(o2,o3)', 'Female(o1)'])"],
-            'name': 'formula2c',
-            'points': 1,
+            'messages': ['Your formula (Forall($x,Forall($y,Forall($z,Implies(Grandmother($x,$z),And(And(Parent($x,$y),Parent($y,$z)),Female($z))))))) says the following model is FALSE, but it should be TRUE:'],
+            'name': 'formula2d',
+            'points': 0,
             'seconds': 0}],
- 'totalPoints': 1}
+ 'totalPoints': 0}

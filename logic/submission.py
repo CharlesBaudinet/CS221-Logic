@@ -115,7 +115,14 @@ def formula2d():
     def Parent(x, y): return Atom('Parent', x, y)            # whether x has a parent y
     def Grandmother(x, y): return Atom('Grandmother', x, y)  # whether x has a grandmother y
     # BEGIN_YOUR_CODE (around 5 lines of code expected)
-    raise Exception("Not implemented yet")
+    # raise Exception("Not implemented yet")
+    def p():
+        return AndList([Parent('$x','$y'),Parent('$y','$z'),Female('$z')])
+    def q():
+        return Grandmother('$x','$z')
+    def conditional():
+        return Forall('$x',Forall('$y',Forall('$z',Equiv(p(),q()))))
+    return conditional()
     # END_YOUR_CODE
 
 ############################################################
